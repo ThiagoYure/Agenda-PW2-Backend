@@ -2,7 +2,6 @@ const { Sequelize, DataTypes } = require('sequelize');
 const Contato = require('./contato');
 
 var sequelize = new Sequelize(process.env.DATABASE_URL,{
-  native: true,
   dialect: 'postgres',
   ssl: true
 });
