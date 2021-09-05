@@ -1,7 +1,11 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const User = require('./user');
 
-var sequelize = new Sequelize(process.env.DATABASE_URL);
+var sequelize = new Sequelize(process.env.DATABASE_URL, {
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 const Contato = sequelize.define('contato', {
   id: {
