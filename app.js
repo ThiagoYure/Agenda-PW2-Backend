@@ -18,8 +18,10 @@ var cors = require('cors');
 app.listen(process.env.PORT);
 app.use(cors());
 var sequelize = new Sequelize(process.env.DATABASE_URL,{
-  native: true,
-  ssl: true
+  dialect: 'postgres',
+  dialectOptions: {
+    ssl: true
+  }
 });
 
 var swaggerDefinition = {

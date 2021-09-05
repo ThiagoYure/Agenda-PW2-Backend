@@ -3,7 +3,9 @@ const Contato = require('./contato');
 
 var sequelize = new Sequelize(process.env.DATABASE_URL,{
   dialect: 'postgres',
-  ssl: true
+  dialectOptions: {
+    ssl: true
+  }
 });
 
 const User = sequelize.define('user', {

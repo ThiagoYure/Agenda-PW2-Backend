@@ -2,8 +2,10 @@ const { Sequelize, DataTypes } = require('sequelize');
 const User = require('./user');
 
 var sequelize = new Sequelize(process.env.DATABASE_URL,{
-  native: true,
-  ssl: true
+  dialect: 'postgres',
+  dialectOptions: {
+    ssl: true
+  }
 });
 
 const Contato = sequelize.define('contato', {
