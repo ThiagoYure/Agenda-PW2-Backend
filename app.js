@@ -17,10 +17,9 @@ var app = express();
 var cors = require('cors');
 app.listen(process.env.PORT);
 app.use(cors());
-var sequelize = new Sequelize(process.env.DATABASE_URL, {
-  ssl: {
-    rejectUnauthorized: false
-  }
+var sequelize = new Sequelize(process.env.DATABASE_URL,{
+  native: true,
+  ssl: true
 });
 
 var swaggerDefinition = {
