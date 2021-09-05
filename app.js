@@ -15,7 +15,7 @@ var contatoRouter = require('./routes/contato');
 
 var app = express();
 var cors = require('cors');
-app.listen(3333);
+app.listen(process.env.PORT);
 app.use(cors());
 var sequelize = new Sequelize('email-check', 'postgres', '1234', {
   host: 'localhost',
