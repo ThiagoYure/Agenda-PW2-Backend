@@ -46,7 +46,7 @@ exports.userCreate = async (req, res) => {
         
         <h1>HTML Links</h1>
         
-        <p><a href="http://localhost:3333/user/emailcheck/token=` + token + `">Validar email!</a></p>
+        <p><a href="https://agenda-pw2-backend.herokuapp.com/user/emailcheck/token=` + token + `">Validar email!</a></p>
         
         </body>
         </html>`
