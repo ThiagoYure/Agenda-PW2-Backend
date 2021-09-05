@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "sequelize db:migrate && node app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.5",
